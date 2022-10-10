@@ -1,10 +1,7 @@
 import { IGoods } from "./goods.interface";
 
 
-export abstract class Goods {
-  abstract price: number;
-  abstract model: string;
-
+export abstract class GoodsFactory {
   abstract factoryMethod(): IGoods;
 
   public getGoodsPrice(): number {

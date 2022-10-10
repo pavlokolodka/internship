@@ -1,13 +1,13 @@
-import {Telephone} from './goods/telephone';
-import {Laptop} from './goods/laptop';
-import {Computer} from './goods/computer';
 import discount from './discount';
-import { Goods } from './goods/goods';
+import { ComputerFactory } from './goods/computer/computer.factory';
+import { GoodsFactory } from './goods/goods.factory';
+import { LaptopFactory } from './goods/laptop/laptop.factory';
+import { TelephoneFactory } from './goods/telephone/telephone.factory';
 
 
 export class User {
   private balance = 50000;
-  private products: Array<Goods> = [new Laptop(), new Telephone(), new Computer()];
+  private products: Array<GoodsFactory> = [new LaptopFactory(), new TelephoneFactory(), new ComputerFactory()];
 
   constructor(private name: string) {
     this.name = name;
